@@ -50,7 +50,7 @@ class Main extends PluginBase implements Listener{
  	 
  	 public function onCommand(CommandSender $sender,Command $cmd, $label,array $args) {
  	 	
- 	 	$msg = "§b§o[ 알림 ] §7/command <lock | unlock> <command> \n §b§o[ 알림 ] §7/command list";
+ 	 	$msg = "§b§o[ 알림 ] §7/command <lock | unlock> <command>\n§b§o[ 알림 ] §7/command list";
  	 	
  	 	if(strtolower($cmd->getName() === "command")) {
  	 		if (!($sender->isOp())) {
@@ -124,7 +124,7 @@ class Main extends PluginBase implements Listener{
  	 	if ($this->isCmd($cmd)) {	
  	 		if (!($player->isOp())) {
 				if(!($this->getServer()->getCommandMap()->getCommand($cmd) === null)) {
-					$player->sendMessage("§b§o [ 알림 ] §7 이 명령어는 잠겨 있습니다.");
+					$player->sendMessage("§b§o[ 알림 ] §7 이 명령어는 잠겨 있습니다.");
 					$ev->setCancelled(true);
 				}
  	 		}
